@@ -19,14 +19,9 @@ function draw() {
     text(t, width / 4, height * 2 / 5, width / 2);
 }
 
-function mouseDragged() {
-	noStroke();
-    fill('240');
-    ellipse(mouseX, mouseY, 100);
-}
-
 function touchMoved() {
 	noStroke();
     fill('240');
     ellipse(mouseX, mouseY, 100);
+	return false;
 }
