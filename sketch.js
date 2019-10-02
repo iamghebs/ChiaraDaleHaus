@@ -17,7 +17,9 @@ function setup() {
 
 function draw() {
     strokeWeight(0.5);
-    textSize(height/50);
+	if(width > height) textSize(height/50);
+	else textSize(width/50);
+
     textFont(Adieu);
     textAlign(CENTER, CENTER);
     fill(10);
