@@ -3,6 +3,12 @@ function preload() {
     Adieu = loadFont('assets/Adieu-Bold.otf');
 }
 
+function preventBehavior(e) {
+    e.preventDefault();
+};
+
+document.addEventListener("touchmove", preventBehavior, {passive: false});
+
 function setup() {
     createCanvas(windowWidth, windowHeight);
     background(10);
@@ -11,7 +17,7 @@ function setup() {
 
 function draw() {
     strokeWeight(0.5);
-    textSize(33);
+    textSize(height/10);
     textFont(Adieu);
     textAlign(CENTER, CENTER);
     fill(10);
