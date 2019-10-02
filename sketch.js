@@ -24,3 +24,9 @@ function mouseDragged() {
     fill('240');
     ellipse(mouseX, mouseY, 100);
 }
+
+function touchMoved() {
+	noStroke();
+    fill('240');
+    ellipse(mouseX, mouseY, 100);
+}
