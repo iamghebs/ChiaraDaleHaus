@@ -7,6 +7,7 @@ var particles = [];
 
 function setup() {
     createCanvas(windowWidth, windowHeight);
+	frameCount(24);
 }
 
 function mouseClicked() {
