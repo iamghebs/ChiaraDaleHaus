@@ -13,6 +13,7 @@ function setup() {
     strokeWeight(1);
     noFill();
     textSize(35);
+    textAlign(CENTER, CENTER);
     //text('PC: gratta lo schermo e scopri il messaggio', width / 4, height / 15, width / 2);
     text('touch: tocca lo schermo con più di 3 dita', width / 4, height / 15, width / 2);
     pop();
@@ -28,7 +29,7 @@ function draw() {
     textFont(Adieu);
     textAlign(CENTER, CENTER);
     var t = 'KWESTURAH  AWARDS  2019  SOON.';
-    text(t, width / 4, height * 2 / 5, width / 2);
+    text(t, width / 4, height * 1 / 5, width / 2);
     // if (touches.length == 0) {
     //     push();
     //     fill('rgb(28, 230, 96)');
