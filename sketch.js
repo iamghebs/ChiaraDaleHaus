@@ -3,29 +3,39 @@ function preload() {
     Adieu = loadFont('assets/Adieu-Bold.otf');
 }
 
-var particles = [];
-
 function setup() {
     createCanvas(windowWidth, windowHeight);
-	frameCount(24);
-}
-
-function mouseClicked() {
-    particles.push(new Particle(mouseX, mouseY));
+    background(10);
+	//noStroke();
+	push();
+	stroke(255);
+	strokeWeight(1);
+	noFill();
+	textSize(22);
+	text('gratta lo schermo e scopri il messaggio', width / 4, height /15, width / 2);
+	pop();
+    // put setup code here
 }
 
 function draw() {
-    background(25);
-    for (var i = 0; i < particles.length; i++) {
-        particles[i].update();
-        particles[i].show();
-    }
+
 	push();
-	fill(25);
+	fill(10);
 	textSize(50);
     textFont(Adieu);
     textAlign(CENTER, CENTER);
     var t = 'KWESTURAH  AWARDS  2019  SOON.';
     text(t, width / 4, height * 2 / 5, width / 2);
 	pop();
+}
+
+function touchMoved() {
+	noStroke();
+    fill('rgb(28, 230, 96)');
+    ellipse(mouseX, mouseY, 100);
+	return false;
+}
+
+function mouseClicked(){
+	console.log("Press");
 }
