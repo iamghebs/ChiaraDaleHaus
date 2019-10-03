@@ -29,21 +29,15 @@ function draw() {
     textAlign(CENTER, CENTER);
     var t = 'KWESTURAH  AWARDS  2019  SOON.';
     text(t, width / 4, height * 2 / 5, width / 2);
-
-    // fill('rgb(28, 230, 96)');
-    // let speed = abs(winMouseX - pwinMouseX);
-    // ellipse(mouseX, mouseY, 20 + speed);
-    // pop();
+    if (touches.length == 0) {
+        push();
+        fill('rgb(28, 230, 96)');
+        let speed = abs(winMouseX - pwinMouseX);
+        ellipse(mouseX, mouseY, 20 + speed);
+        pop();
+    }
 }
 
-function mouseDragged() {
-    push();
-    noStroke();
-    fill('rgb(28, 230, 96)');
-    ellipse(mouseX, mouseY, 100);
-    return false;
-    pop();
-}
 
 function touchStarted() {
     return false;
