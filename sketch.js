@@ -13,14 +13,14 @@ function setup() {
     strokeWeight(1);
     noFill();
     textSize(35);
-    text('PC: gratta lo schermo e scopri il messaggio', width / 4, height / 15, width / 2);
-    text('touch: tocca lo schermo con più di 5 dita', width / 4, height * 2 / 15, width / 2);
+    //text('PC: gratta lo schermo e scopri il messaggio', width / 4, height / 15, width / 2);
+    text('touch: tocca lo schermo con più di 3 dita', width / 4, height / 15, width / 2);
     pop();
     // put setup code here
 }
 
 function draw() {
-    if (touches.length > 5)
+	if (touches.length >= 3)
         var colore = 'rgb(28, 230, 96)';
     else var colore = 10;
     fill(colore);
@@ -29,13 +29,13 @@ function draw() {
     textAlign(CENTER, CENTER);
     var t = 'KWESTURAH  AWARDS  2019  SOON.';
     text(t, width / 4, height * 2 / 5, width / 2);
-    if (touches.length == 0) {
-        push();
-        fill('rgb(28, 230, 96)');
-        let speed = abs(winMouseX - pwinMouseX);
-        ellipse(mouseX, mouseY, 20 + speed);
-        pop();
-    }
+    // if (touches.length == 0) {
+    //     push();
+    //     fill('rgb(28, 230, 96)');
+    //     let speed = abs(winMouseX - pwinMouseX);
+    //     ellipse(mouseX, mouseY, 20 + speed);
+    //     pop();
+    // }
 }
 
 
