@@ -6,6 +6,7 @@ function preload() {
 function setup() {
     createCanvas(windowWidth, windowHeight);
     background(10);
+	frameRate(50);
 	//noStroke();
 	push();
 	stroke(255);
@@ -27,14 +28,18 @@ function draw() {
     var t = 'KWESTURAH  AWARDS  2019  SOON.';
     text(t, width / 4, height * 2 / 5, width / 2);
 	pop();
+	push();
+	fill('rgb(28, 230, 96)');
+	ellipse(mouseX, mouseY, 100);
+	pop();
 }
 
-function touchMoved() {
-	noStroke();
-    fill('rgb(28, 230, 96)');
-    ellipse(mouseX, mouseY, 100);
-	return false;
-}
+// function mouseDragged() {
+// 	noStroke();
+//     fill('rgb(28, 230, 96)');
+//     ellipse(mouseX, mouseY, 100);
+// 	return false;
+// }
 
 function mouseClicked(){
 	console.log("Press");
